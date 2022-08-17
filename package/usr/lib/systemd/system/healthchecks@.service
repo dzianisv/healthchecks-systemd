@@ -1,0 +1,9 @@
+[Unit]
+Description=Heartbeat
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/curl -fsS --retry 3 https://hc-ping.com/%i
+User=nobody
+WorokingDirectory=/run/healthchecks-%i
+RuntimeDirectory=healthchecks-%i

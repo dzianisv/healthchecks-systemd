@@ -1,0 +1,9 @@
+[Unit]
+Description=Send heartbeat every 5 minutes
+
+[Timer]
+OnCalendar=*-*-* *:00/5:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
